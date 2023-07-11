@@ -11,10 +11,11 @@ The core of the project lies in training a robust set of predictive models, leve
 To ensure the effectiveness and reliability of the developed models, an evaluation will be conducted using appropriate performance metrics. This evaluation will assess the models' accuracy, precision, recall, and other relevant measures to determine their capability in detecting and classifying security threats.
 
 # Dataset 
-The KDD Intrusion Detection Dataset, also known as the KDDCup'99 dataset, is a widely used benchmark dataset in the field of intrusion detection and network security. It was created as part of the Third International Knowledge Discovery and Data Mining Tools Competition held in 1999. The dataset was designed to simulate a real-world network environment and contains a representative sample of network traffic data.
+The KDD Intrusion Detection Dataset consists of a wide variety of intrusions simulated in a military network environment. It was created to acquire raw TCP/IP dump data for a network by simulating a typical US Air Force LAN. The LAN was focused like a real environment and blasted with multiple attacks. A connection is a sequence of TCP packets starting and ending at some time duration between which data flows to and from a source IP address to a target IP address under some well-defined protocol. Also, each connection is labeled as either normal or as an attack with exactly one specific attack type. Each connection record consists of about 100 bytes.
+For each TCP/IP connection, 41 quantitative and qualitative features are obtained from normal and attack data (3 qualitative and 38 quantitative features) . The class variable has two categories:
+• Normal
+• Anomalous
 
-The KDD dataset is derived from a large amount of raw network data collected from a military network simulation environment. It consists of a set of preprocessed network connection records, where each record represents a specific network connection or activity. The dataset aims to capture a variety of normal and attack-related activities, allowing researchers to develop and evaluate intrusion detection systems.
-
-The dataset contains a total of five million connection records, which are classified into different types of network attacks or normal activities. The attacks are categorized into four main classes: Denial of Service (DoS), User to Root (U2R), Remote to Local (R2L), and Probing. The normal activities represent legitimate network connections.
-
-Each connection record in the dataset is described by 41 features, including attributes related to protocol type, service type, source and destination addresses, duration of the connection, number of failed login attempts, and various statistical measures calculated from the network traffic. These features provide valuable information for analyzing and detecting network intrusions.
+# Approach
+The goal of this project is to test a set of classifiers for the categorization of network flows as either normal or anomalous. A different subsets of the features provided in the dataset will are used to train the ML classifiers. Three approaches including : correlated features, LASO and random forst are used to select the best features.
+ML methods like Naive Bayes, random forest, SVM, xgboost are  applied to the problem and evaluated in order to assess the feasibility of using traditional machine learning approaches.
