@@ -17,5 +17,5 @@ For each TCP/IP connection, 41 quantitative and qualitative features are obtaine
 • Anomalous
 
 # Approach
-The goal of this project is to test a set of classifiers for the categorization of network flows as either normal or anomalous. A different subsets of the features provided in the dataset will are used to train the ML classifiers. Three approaches including : correlated features, LASO and random forst are used to select the best features.
+The goal of this project is to test a set of classifiers for the categorization of network flows as either normal or anomalous. A different subsets of the features provided in the dataset are used to train the ML classifiers. Three approaches including : correlated features, LASO and random forst are used to select the best features.
 ML methods like Naive Bayes, random forest, SVM, xgboost are  applied to the problem and evaluated in order to assess the feasibility of using traditional machine learning approaches.
